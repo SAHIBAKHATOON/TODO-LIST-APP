@@ -1,0 +1,227 @@
+.home-container {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: #2a2a2a;
+  padding: clamp(12px, 4vw, 24px);
+  color: white;
+  max-width: 100%;
+}
+
+.todo-header {
+  text-align: center;
+  margin-bottom: clamp(20px, 5vw, 30px);
+  padding-top: clamp(16px, 4vw, 24px);
+}
+
+.todo-title-white,
+.todo-title-blue {
+  font-size: clamp(24px, 6vw, 32px);
+  font-weight: bold;
+}
+
+.todo-title-white {
+  color: white;
+}
+
+.todo-title-blue {
+  color: #007bff;
+}
+
+.tasks-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(12px, 3vw, 20px);
+  margin-bottom: clamp(20px, 5vw, 30px);
+}
+
+@media (min-width: 380px) {
+  .tasks-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 600px) {
+  .tasks-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (min-width: 900px) {
+  .tasks-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+
+.no-tasks-message {
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 24px;
+  margin: 0;
+  grid-column: 1 / -1;
+}
+
+.task-card {
+  background-color: white;
+  border-radius: clamp(6px, 2vw, 10px);
+  padding: clamp(12px, 3vw, 18px);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: clamp(8px, 2vw, 14px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 160px;
+}
+
+.task-checkbox-container {
+  flex-shrink: 0;
+}
+
+.task-checkbox {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.2s;
+}
+
+.task-checkbox.complete {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: white;
+}
+
+.task-checkbox.incomplete {
+  background-color: white;
+  border-color: #333;
+  color: #000;
+}
+
+.task-checkbox svg {
+  width: 14px;
+  height: 14px;
+}
+
+.task-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-title {
+  font-size: clamp(14px, 3.5vw, 16px);
+  font-weight: bold;
+  color: #000;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  word-break: break-word;
+}
+
+.task-description {
+  font-size: clamp(11px, 2.8vw, 13px);
+  color: #555;
+  margin: 0;
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  flex: 1;
+  word-break: break-word;
+}
+
+.view-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: clamp(10px, 2.5vw, 12px) clamp(14px, 3vw, 18px);
+  font-size: clamp(13px, 3vw, 15px);
+  font-weight: 500;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 0.2s;
+  margin-top: auto;
+  align-self: flex-start;
+  min-height: 44px;
+  min-width: 80px;
+}
+
+.view-button:hover {
+  background-color: #0056b3;
+}
+
+.home-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.view-all-link {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: clamp(14px, 3vw, 16px);
+  text-decoration: underline;
+  padding: clamp(8px, 2vw, 12px) 0;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-all-link:hover {
+  color: #ccc;
+}
+
+.add-todo-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: clamp(12px, 3vw, 16px) clamp(20px, 5vw, 28px);
+  font-size: clamp(15px, 3.5vw, 17px);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+  min-height: 48px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.add-todo-button:hover {
+  background-color: #0056b3;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #2a2a2a;
+  color: white;
+  font-size: 18px;
+}
+
+@media (max-width: 379px) {
+  .task-card {
+    min-height: 140px;
+  }
+}
+

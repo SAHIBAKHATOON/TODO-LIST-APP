@@ -1,0 +1,186 @@
+.task-detail-container {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: #2a2a2a;
+  padding: clamp(12px, 4vw, 24px);
+  color: white;
+  max-width: 100%;
+}
+
+.todo-header {
+  text-align: center;
+  margin-bottom: clamp(20px, 5vw, 30px);
+  padding-top: clamp(16px, 4vw, 24px);
+}
+
+.todo-title-white,
+.todo-title-blue {
+  font-size: clamp(24px, 6vw, 32px);
+  font-weight: bold;
+}
+
+.todo-title-white {
+  color: white;
+}
+
+.todo-title-blue {
+  color: #007bff;
+}
+
+.task-detail-content {
+  max-width: min(600px, 100%);
+  margin: 0 auto;
+}
+
+.status-section {
+  margin-bottom: 30px;
+}
+
+.status-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.status-checkbox {
+  width: clamp(48px, 12vw, 60px);
+  height: clamp(48px, 12vw, 60px);
+  border-radius: 50%;
+  border: 2px solid #333;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.status-checkbox.complete {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: white;
+}
+
+.status-checkbox.incomplete {
+  background-color: white;
+  border-color: #333;
+  color: #000;
+}
+
+.status-checkbox svg {
+  width: 24px;
+  height: 24px;
+}
+
+.form-section {
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: clamp(12px, 3vw, 14px);
+  border: none;
+  border-radius: 6px;
+  background-color: white;
+  color: #000;
+  font-size: 16px;
+  font-family: inherit;
+  box-sizing: border-box;
+  min-height: 48px;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #999;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 3vw, 16px);
+  margin-top: clamp(24px, 5vw, 32px);
+}
+
+.update-button,
+.delete-button {
+  width: 100%;
+  min-height: 48px;
+  border: none;
+  border-radius: 8px;
+  padding: clamp(14px, 3vw, 16px) clamp(20px, 4vw, 28px);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-transform: uppercase;
+}
+
+.update-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.update-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.update-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+.loading,
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #2a2a2a;
+  color: white;
+  font-size: 18px;
+}
+
+.status-checkbox svg {
+  width: clamp(20px, 5vw, 24px);
+  height: clamp(20px, 5vw, 24px);
+}
+
